@@ -250,12 +250,9 @@ if(NOT IN_OPENWRT)
 add_subdirectory(tests)
 endif()
 
-if(WIN32)
-else()
-    install (TARGETS 
-        ${iothub_client_libs} 
-        DESTINATION lib)
-    install (FILES 
-        ${iothub_client_h_install_files} 
-        DESTINATION include/azureiot)
-endif (WIN32)
+install (TARGETS 
+    ${iothub_client_libs} 
+    DESTINATION lib)
+install (FILES 
+    ${iothub_client_h_install_files} 
+    DESTINATION include/azureiot)
